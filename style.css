@@ -1,0 +1,3129 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+/* Esto mi amor es para quitar el diseño por defecto que tiene la página*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courgette', cursive;
+}
+
+body {
+    background: #f9f9f9;
+    min-height: 100vh;
+    overflow-x: hidden;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    opacity: 0;
+    transition: 0.4s;
+}
+
+
+/*Esto es para separar cada sección y ponerles margen entre otras cositas*/
+
+.MV {
+    padding: 475px 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+/*Esto es para ponerle ciertos estilos en general al menu y al logo*/
+
+header {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    padding: 8px 20px;
+    display: flex;
+    justify-content: space-start;
+    align-items: center;
+    z-index: 100;
+    background-color: rgba(255, 255, 255, 0.39);
+}
+
+/*Esto es para cambiar el color del logo y el tamaño de letra*/
+
+.logo {
+    font-family: 'Fredoka One', cursive;
+    font-size: 3em;
+    margin-top: 4px;
+    color: #fbfeff00;
+    margin-right: 330px;
+    margin-left: 125px;
+    cursor: pointer;
+    -webkit-text-stroke: 1px rgb(0, 0, 0);
+}
+
+.logo:hover {
+    text-shadow: 0 0 20px var(--color);
+    border-color: var(--color);
+}
+
+.logo-palm {
+    position: absolute;
+    top: 12px;
+    width: 90px;
+    margin-left: 25px;
+}
+
+/*Esto es para el menu, para quitarle el feito diseño por defecto y ponerle el que yo puse*/
+
+.list {
+    position: relative;
+    display: inline-block;
+    color: rgb(228, 232, 236);
+    font-weight: bold;
+    padding: 5px 17px;
+    border-radius: 20px;
+    margin-top: 15px;
+    left: 180px;
+    -webkit-text-stroke: 1px rgb(0, 0, 0);
+    font-size: 1.4rem;
+}
+
+.list a {
+    text-decoration: none;
+    font-family: 'Fredoka One', cursive;
+    font-size: 20px;
+   color: #f4f6f781;
+   margin-left: 4px;
+   -webkit-text-stroke: 0.6px rgb(0, 0, 0);
+   font-family: 'Fredoka One', cursive;
+   font-size: 1.5rem;
+}
+
+.list:hover {
+    background: #6dc6fa;
+    color: #fff;
+}
+
+.list >a:hover {
+    background: #6dc6fa;
+    color: #fff;
+}
+
+/* Esto es para el buscador mi amor */
+
+input[type="search"]{
+    position: absolute;
+    top: 95px;
+    left: 980px;
+    z-index: 1;
+	padding: 10px;
+	padding-right: 95px;
+	border: none;
+    text-indent: 5px;
+}
+
+/*Esto es para la cajita donde salen las sugerencias del buscador mi amor*/
+
+.search{
+    position: absolute;
+	width: 20%;
+	max-width: 1000px;
+	margin: auto;
+	background: #fff;
+	padding: 5px 5px;
+	padding-bottom: 5px 5px;
+	max-height: 25%;
+	overflow-x: hidden;
+	display: none;
+    top: 135px;
+    z-index: 1000;
+    right: 115px;
+    background: rgba(255, 254, 254, 0.712);
+
+}
+
+/*Esto es para darle ese color negrito al pasarlo por las sugerencias mi amor*/
+
+tbody tr a:hover {
+    background: #1f1e1e41;
+}
+
+/*Esto es para el color de las lupitas de las sugerencias del buscador mi amor*/
+
+tbody tr a i {
+    margin-right: 10px;
+    color: rgb(20, 108, 240);
+}
+
+.search-table{
+	width: 100%;
+}
+
+tbody tr td{
+	width: 100%;
+}
+
+/*Esto es para otros efectos de las sugerencias mi amor*/
+
+tbody tr td a{
+	text-decoration: none;
+	font-size: 20px;
+	color: #4b4a4a;
+	display: block;
+	width: 100%;
+	height: 100%;
+	padding: 20px 0;
+	padding-left: 20px;
+
+}
+
+.search::-webkit-scrollbar{ 
+	background:rgba(0,0,0,0);  
+}
+
+.search::-webkit-scrollbar-button{
+ 	background:#C1C1C1;  
+}
+
+.search::-webkit-scrollbar-thumb{ 
+	background:#C1C1C1; 
+}
+
+.dataTables_length,
+.dataTables_filter,
+.dataTables_info,
+.dataTables_paginate {
+	display: none;
+}
+
+
+/*Esto es para la barrita del buscador mi amor*/
+
+.search input {
+    color: #000;
+    outline: none;
+    border: 1px solid silver;
+    border-radius: 50px;
+}
+
+/*Esto es para poner a pooh junto al buscador*/
+
+.img-think {
+    position: absolute;
+    width: 45px;
+    left: 1225px;
+    top: 80px;
+    z-index: 1;
+}
+
+/*Aquí centramos las imágenes y el titulo de la página*/
+
+.MV {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/*Esto es para colocar bien las imágenes*/
+
+.MV img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 175vh;
+    pointer-events: none;
+    object-fit: cover;
+}
+
+/*Aquí centramos el título y le agregamos el efecto wave (ola)*/
+   
+#text {
+    position: absolute;
+    font-size: 7rem;
+    font-family: 'Fredoka One', cursive;
+    margin-bottom: 4%;
+    margin-top: -350px;
+}
+
+
+#border {
+    margin-top: -350px;
+    font-size: 7rem;
+    margin-bottom: 4%;
+    font-family: 'Fredoka One', cursive;
+    color: rgba(255, 253, 253, 0.425);
+    mix-blend-mode: screen;
+    text-shadow: 
+    -1px -1px 0 rgb(10, 10, 10),
+    1px -1px 0 rgb(8, 8, 8),
+    1px 1px 0 rgb(17, 17, 17),
+    -1px 1px 0 rgb(8, 8, 8)
+}
+
+
+.wave {
+    color: #09f;
+    animation: wave 3s ease-in-out infinite;
+}
+
+@keyframes wave {
+    0%, 100% {
+        clip-path: polygon(
+            0% 47%, 
+            10% 48%,
+            33% 54%,
+            54% 60%,
+            70% 61%,
+            84% 59%,
+            100% 52%,
+            100% 100%,
+            0% 100%
+        );
+    }
+
+    50% {
+        clip-path: polygon(
+            0% 60%,
+            15% 65%,
+            34% 66%,
+            51% 62%,
+            67% 50%,
+            84% 45%,
+            100% 46%,
+            100% 100%,
+            0% 100%
+        );
+    }
+}
+
+/*_______________________________________________________________________________________________________________________________________________________________________*/
+
+/*SECCIÓN 2*/
+
+/*Esto es para la segunda sección, y el video de fondo */
+
+.section-2{
+    width: 100%;
+    height: 157vh;
+    background: #00c8ff9c;
+    background: -webkit-linear-gradient(to right, #92fe9d96, #00c8ff96);   /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #92fe9d79, #00c8ff9f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    position: absolute;
+    top: 850px;
+    right: -0px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.ocean {
+    position: absolute;
+    z-index: -100;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+/*Esto es para el diseño de las letras de la segunda sección*/
+
+.section-2 h2 {
+    font-size: 65px;
+    line-height: 160px;
+    font-family: 'Fredoka One', cursive;
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+    background: url(img/lines.png);
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: back 20s linear infinite;
+    position: absolute;
+    word-spacing: 2px;
+}
+
+.section-2 h4 {
+    font-size: 67px;
+    margin-left: 10px;
+    margin-top: -25px;
+    font-family: 'Fredoka One', cursive;
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+    background: url(img/lines.png);
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: back 20s linear infinite;
+    position: absolute;
+    word-spacing: 2px;
+}
+
+/*Esto es para la animación que tiene el título,
+la línea blanca que se mueve en el título*/
+
+@keyframes back {
+    100%{
+        background-position: 2000px 0;
+    }
+}
+
+/*Esto es para la ola que tiene de diseño la seccion-2 en el borde inferior*/
+
+.wave1 {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: transparent;
+    top: 85.2%;
+}
+
+/*Esto es para el dibujo de la segunda sección,
+donde tú y yo estamos nadando*/
+
+.img-about {
+    z-index: 100;
+    margin: -200px 500px 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 175vh;
+    pointer-events: none;
+}
+
+/*Esto es para el texto de la seguna sección,
+y los títulos de las estaciones*/
+
+.section-2 
+.MV-text {
+    width: 56%;
+    margin-top: 115px;
+    margin-left: 40%;
+    min-height: 10vh;
+}
+
+/*Esto es para el diseño de las viñetas,
+y para los párrafos de cada estación */
+
+.MV-text h3 {
+    color: white;
+    font-size: 28px;
+    font-family: 'Rampart One', cursive;
+   
+}
+
+.MV-text h3 span{
+    background: #ffffff;
+    color: #000000;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    width: 36px;
+    height: 36px;
+    padding: 2px;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.5);
+    margin-right: 15px;
+    margin-top: 30px;
+
+}
+
+.MV-text p {
+    padding: 0px 0px 10px 30px;
+    font-weight: 300;
+    text-align: justify;
+    margin-top: 10px;
+    font-family: 'Josefin Sans', sans-serif;    
+    font-size: 26px;
+    line-height: 25px;
+}
+
+/*Esto es para el círculo pequeño que tiene cada burbuja*/
+
+.dot {
+    height: 10px;
+    width: 10px;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    top: 20%;
+    right: 20%;
+}
+
+/*Esto es para el diseño de las burbujas mi amor,
+la forma circular de la burbuja y la animación*/
+
+.bubbles-animation1{
+    top: 20%;
+    left: 20%;
+    height: 90px;
+    width: 90px;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    border-radius: 50px;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    animation: animate 4s linear infinite;
+    z-index: 100;
+}
+
+
+.bubbles-animation2{
+    top: 60%;
+    left: 80%;
+    animation: animate 10s linear infinite;
+    height: 80px;
+    width: 80px;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    border-radius: 50px;
+    position: absolute;
+    z-index: 100;
+}
+
+
+.bubbles-animation3{
+    top: 40%;
+    left: 40%;
+    animation: animate 5s linear infinite;
+    height: 60px;
+    width: 60px;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    border-radius: 50px;
+    position: absolute;
+    z-index: 100;
+}
+
+
+.bubbles-animation4{
+    top: 66%;
+    left: 30%;
+    animation: animate 7s linear infinite;
+    height: 90px;
+    width: 90px;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    border-radius: 50px;
+    position: absolute;
+    z-index: 100;
+}
+
+.bubbles-animation5{
+    top: 82%;
+    left: 10%;
+    animation: animate 9s linear infinite;
+    height: 60px;
+    width: 60px;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    border-radius: 50px;
+    position: absolute;
+    z-index: 100;
+}
+
+.bubbles-animation6{
+    top: 30%;
+    left: 60%;
+    animation: animate 5s linear infinite;
+    height: 60px;
+    width: 60px;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    border-radius: 50px;
+    position: absolute;
+    z-index: 100;
+}
+
+.bubbles-animation7{
+    top: 70%;
+    left: 20%;
+    animation: animate 8s linear infinite;
+    z-index: 100;
+    height: 90px;
+    width: 90px;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    border-radius: 50px;
+    position: absolute;
+    z-index: 100;
+}
+
+.bubbles-animation8{
+    top: 75%;
+    left: 60%;
+    animation: animate 10s linear infinite;
+    z-index: 100;
+    height: 60px;
+    width: 60px;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    border-radius: 50px;
+    position: absolute;
+    z-index: 100;
+}
+.bubbles-animation9{
+    top: 50%;
+    left: 50%;
+    animation: animate 6s linear infinite;
+    z-index: 100;
+    height: 60px;
+    width: 60px;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    border-radius: 50px;
+    position: absolute;
+    z-index: 100;
+}
+.bubbles-animation10{
+    top: 45%;
+    left: 20%;
+    animation: animate 10s linear infinite;
+    height: 60px;
+    width: 60px;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    border-radius: 50px;
+    position: absolute;
+    z-index: 100;
+}
+.bubbles-animation11{
+    top: 10%;
+    left: 90%;
+    animation: animate 9s linear infinite;
+    height: 60px;
+    width: 60px;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    border-radius: 50px;
+    position: absolute;
+    z-index: 100;
+}
+
+.bubbles-animation12{
+    top: 20%;
+    left: 70%;
+    animation: animate 7s linear infinite;
+    z-index: 100;
+    height: 80px;
+    width: 80px;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    border-radius: 50px;
+    position: absolute;
+}
+
+.bubbles-animation13{
+    top: 20%;
+    left: 20%;
+    animation: animate 8s linear infinite;
+    z-index: 100;
+    height: 60px;
+    width: 60px;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    border-radius: 50px;
+    position: absolute;
+}
+
+.bubbles-animation14{
+    top: 60%;
+    left: 5%;
+    animation: animate 6s linear infinite;
+    z-index: 100;
+    height: 60px;
+    width: 60px;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    border-radius: 50px;
+    position: absolute;
+}
+
+.bubbles-animation15{
+    top: 80%;
+    left: 80%;
+    animation: animate 9s linear infinite;
+    z-index: 100;
+    height: 60px;
+    width: 60px;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    border-radius: 50px;
+    position: absolute;
+}
+
+.bubbles-animation16{
+    top: 50%;
+    left: 70%;
+    animation: animate 3s linear infinite;
+    z-index: 100;
+    height: 100px;
+    width: 100px;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    border-radius: 50px;
+    position: absolute;
+}
+
+.bubbles-animation17{
+    top: 30%;
+    left: 25%;
+    animation: animate 6s linear infinite;
+    z-index: 100;
+    height: 60px;
+    width: 60px;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    border-radius: 50px;
+    position: absolute;
+}
+
+.bubbles-animation18{
+    top: 60%;
+    left: 40%;
+    animation: animate 3s linear infinite;
+    z-index: 100;
+    height: 60px;
+    width: 60px;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    border-radius: 50px;
+    position: absolute;
+}
+
+.bubbles-animation19{
+    top: 70%;
+    left: 95%;
+    animation: animate 2s linear infinite;
+    z-index: 100;
+    height: 60px;
+    width: 60px;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    border-radius: 50px;
+    position: absolute;
+}
+
+.bubbles-animation20{
+    top: 39%;
+    left: 93%;
+    animation: animate 7s linear infinite;
+    z-index: 100;
+    height: 60px;
+    width: 60px;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    border-radius: 50px;
+    position: absolute;
+}
+
+.bubbles-animation21{
+    top: 85%;
+    left: 50%;
+    animation: animate 5s linear infinite;
+    z-index: 100;
+    height: 60px;
+    width: 60px;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    border-radius: 50px;
+    position: absolute;
+}
+
+.bubbles-animation22{
+    top: 56%;
+    left: 59%;
+    animation: animate 5s linear infinite;
+    z-index: 100;
+    height: 60px;
+    width: 60px;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    border-radius: 50px;
+    position: absolute;
+}
+
+.bubbles-animation23{
+    top: 35%;
+    left: 4%;
+    animation: animate 4s linear infinite;
+    z-index: 100;
+    height: 60px;
+    width: 60px;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    border-radius: 50px;
+    position: absolute;
+}
+
+.bubbles-animation24{
+    top: 40%;
+    left: 15%;
+    animation: animate 4s linear infinite;
+    z-index: 100;
+    height: 60px;
+    width: 60px;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    border-radius: 50px;
+    position: absolute;
+}
+
+.bubbles-animation25{
+    top: 80%;
+    left: 35%;
+    animation: animate 6s linear infinite;
+    z-index: 100;
+    height: 60px;
+    width: 60px;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    border-radius: 50px;
+    position: absolute;
+}
+
+/*Esto es lo que hace que las burbujas tengan esa animación como de explotar,
+te amoooooOOO mi amor*/
+
+@keyframes animate {
+    0%{
+        transform: scale(0) translateY(0) rotate(70deg);
+    }
+    100%{
+        transform: scale(1.3) translateY(-100px) rotate(360deg);
+    }
+}
+
+/*Esto es para agregarle diseños al botón mi amor*/
+
+.btn-floating {
+    position: relative;
+    border: 3px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    z-index: 100;
+    text-decoration: none;
+    font-family: 'DynaPuff', cursive;
+    color: transparent;
+    -webkit-text-stroke: 1.9px #000000;
+    top: -148px;
+    margin-left: 550px;
+    padding: 1.5rem 4rem;
+}
+
+/*Esto es para agregarle el color al borde
+del botón mi amor*/
+
+.btn-floating {
+    border-color: #fffefe;
+    border-radius: 50px;
+}
+
+.btn-floating:hover {
+    border-color: rgb(0, 0, 0);
+}
+
+/*Aquí coloque el primer texto que se ve mi amor,
+el de shht y también le puse unos estilos*/
+
+.btn-floating::before {
+    content: 'Shht';
+    position: absolute;
+    font-size: 25px;
+    top: 33px;
+    margin-left: 0;
+    transform: translate(-50%, -50%);
+    transition: .2s ease;
+}
+
+/*Aquí le coloque el texto que se ve después mi amor,
+el que dice que te amooOOOOOOOOOOOOOO*/
+
+.btn-floating::after {
+    content: 'Te Amo';
+    position: absolute;
+    top: 33px;
+    margin-left: 0;
+    font-size: 25px;
+    transform: translate(-50%, -50%) scale(0);
+    transition: .2s ease;
+    opacity: 0;
+}
+
+/*El efecto hover es el que hace que en el botón
+se vea primero el shhht y luego el te amOOOOO*/
+
+.btn-floating:hover::before {
+    transform: translate(-50%, -50%) scale(3);
+    opacity: 0;
+}
+
+.btn-floating:hover::after{
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+}
+
+/*Esto es para crear el efecto que hace el botón mi amor*/
+
+.btn-floating:hover {
+    background-position: right;
+}
+
+/*Esto es para la ventana flotante mi amor, como la hoja en blanco que sale, 
+le puedes cambiar el color blanco al que tú quieras mi amor*/
+
+.text-floating {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    width: 450px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    z-index: 100;
+    display: none;
+    background-image: url(img/bear-kiss.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/*Esto es para el estilos y márgenes del párrafo mi amor*/
+
+.text-floating p {
+   margin-top: -10px;
+   margin-right: 40px;
+}
+
+.text-floating2 {
+    position: absolute;
+    top: 259px;
+    white-space: nowrap;
+    left: 6px;
+}
+
+.heart-floating {
+    color: red;
+}
+
+/*Esto es para la x que es para cerrar la ventana mi amor*/
+
+.close {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    padding: 10px 20px;
+    background: #f00;
+    color: #fff;
+    cursor: pointer;
+    z-index: 100;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    display: none;
+}
+
+/*________________________________________________________________________________________________________________________________________________________________*/
+
+/*SECCIÓN 3*/
+
+/*Esto es para márgenes generales del contenedor mi amor o de la sección*/
+
+.MV-3 {
+    min-height: 10vh;
+    background: linear-gradient(#65e0ffd0, rgb(127, 226, 210), rgba(89, 159, 206, 0.678));
+    margin-top: -98px;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Esto es para el título que dice galleria mi amor*/
+
+.video-title {
+    text-align: center;
+    width: 100%;
+    max-width: 1750px;
+    margin: 0;
+    padding: 0;
+    margin-top: -260px;
+    margin-left: -180px;
+}
+
+/*Aquí le añadí el gif al título mi amor*/
+
+.video-title p {
+    font-size: 170px;
+    font-family: 'DynaPuff', cursive;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: url(img/atardecer2.gif);
+    margin-bottom: 50px;
+    position: absolute;
+    text-align: center;
+    align-content: center;
+    margin-left: 550px;
+}
+
+/*Esto es para el dibujo del bote mi amor*/
+
+.boat {
+    position: absolute;
+    width: 230px;
+    right: 50px;
+    top: 2290px;
+    animation: boat 10s linear infinite;
+
+}
+
+/*Esto es para la posición y tamaño de los peces que estan en esta sección mi amor*/
+
+.lobester {
+    position: absolute;
+    z-index: 100;
+    top: 1780px;
+    margin-left: 140px;
+    animation: lobester 15s linear infinite;
+}
+
+.shark {
+    position: absolute;
+    z-index: 100;
+    top: 2230px;
+    left: -100px;
+    animation: shark 8s linear infinite;
+}
+
+.manta-ray {
+    position: absolute;
+    z-index: 100;
+    top: 2070px;
+    margin-left: 1180px;
+    animation: mantaRay 12s linear infinite;
+}
+
+.fish03 {
+    position: absolute;
+    z-index: 100;
+    top: 1740px;
+    right: 90px;
+    animation: fish03 15s linear infinite;
+}
+
+.fish4 {
+    position: absolute;
+    z-index: 100;
+    top: 2180px;
+    margin-left: 1000px;
+}
+
+.fish5 {
+    position: absolute;
+    z-index: 100;
+    top: 2430px;
+    margin-left: 1700px;
+    animation: fish5 15s linear infinite;
+}
+
+/*Esto es para la animación que tienen unos peces mi amor*/
+
+@keyframes fish03 {
+    0%{
+        right: 0px;
+    }
+    100%{
+        right: 305px;
+    }
+}
+
+@keyframes fish5 {
+    0%{
+        margin-right: 0px;
+    }
+    100%{
+        margin: 100px;
+    }
+}
+
+@keyframes shark {
+    0%{
+        margin-right: 0;
+    }
+    100%{
+        margin-left: 500px;
+    }
+}
+
+@keyframes lobester {
+    0%{
+        width: 10px;
+    }
+    0%{
+        margin-left: 10px;
+    }
+}
+
+@keyframes mantaRay {
+    0%{
+        margin-right: 0;
+    }
+    100%{
+        margin-left: 200px;
+    }
+}
+
+@keyframes boat {
+    0%{
+        margin-right: 0;
+    }
+    100%{
+        margin-right: 500px;
+    }
+}
+
+/*Esto es para estilos del párrafo mi amor*/
+
+.text-03 {
+    position: relative;
+    text-align: center;
+    top: 300px;
+    margin-right: 80px;
+    font-size: 30px;
+    font-family: 'Caveat', cursive;
+}
+
+/*Esto es para cambiar el color de las cositas del párrafo,
+el córazon y algunas frases.*/
+
+.heart {
+    color: red;
+}
+
+.my-love {
+    color: white;
+}
+
+.css-1 {
+    color: blue;
+}
+
+.java {
+    color: blue;
+}
+
+/*Esto es para el diseño del botón*/
+
+.btn-section3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-gallery {
+    display: flex;
+    border: 3px solid;
+    font-family: 'DynaPuff', cursive;
+    position: relative;
+    padding: 20px 30px;
+    text-decoration: none;
+    letter-spacing: 5px;
+    font-size: 25px;
+    color: white;
+    top: 330px;
+    background: #df9666;
+    border-radius: 50px;
+    transition: transform 0.3s ease;
+    transition: all 0.6s ease;
+}
+
+/*Estos estilos los separe porque sino no funciona bien mi amor,
+tienen que estar separados*/
+
+.btn-gallery {
+    background: #df9666;
+    color: #ffffff;
+    border-radius: 50px;
+    transition: transform 0.3s ease;
+}
+
+/*Esto es para la sombra naranja que tiene el botón mi amor*/
+
+.btn-gallery::after, .btn-gallery::before {
+    content: "";
+    position: absolute;
+    opacity: 0.3;
+    background: #df9666;
+    border-radius: inherit;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: transform 0.3 ease;
+}
+
+/*El efecto hover hace que las letras y el borde cambien a negro*/
+
+.btn-gallery:hover {
+    transform: translate(-15px, -15px);
+    color: #070707;
+}
+
+.btn-gallery:hover::after {
+    transform: translate(15px, 15px);
+}
+
+.btn-gallery:hover::before {
+    transform: translate(15px, 15px);
+}
+
+
+/*Esto es para la ola inferior de esta sección mi amor*/
+
+.wave2 {
+    position: relative;
+    margin-top: 500px;
+}
+
+/*Esto es para las gotas mi amor que en inglés es drops Uyyy,
+en total hice 7 gotas mi amor y también aqui le cambie el color al texto que coloque en unas gotas mi amor*/
+
+.drops {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 990px;
+    padding: 150px 0;
+}
+
+
+.drop {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: transparent;
+    border-radius: 57% 43% 37% 63% / 45% 52% 48% 55%;
+    box-shadow: inset 10px 10px 10px rgba(0, 0, 0, 0.05),
+                15px 25px 10px rgba(0, 0, 0, 0.1),
+                15px 20px 20px rgba(0, 0, 0, 0.05),
+                inset -10px -10px 15px rgba(255, 255, 255, 0.9);
+                display: flex;
+                justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    color: orange;
+    opacity: 0.5;
+    
+}
+
+.drop::before {
+    content: '';
+    position: absolute;
+    top: 25px;
+    left: 35px;
+    background: #fff;
+    width: 20px;
+    height: 20px;
+    border-radius: 42% 58% 37% 63% / 40% 43% 57% 60%;
+}
+
+.drop::after {
+    content: '';
+    position: absolute;
+    top: 25px;
+    left: 65px;
+    background: #fff;
+    width: 10px;
+    height: 10px;
+    border-radius: 57% 43% 37% 63% / 48% 37% 63% 52%;
+}
+
+/*el nth-child son como los hijos mi amor de la primer gota que coloque,
+esto deja los estilos que coloque antes y aquí ya cambie, el tamaño de la gota con el border-radius y con el transform los cambie de posición mi amor*/
+
+.drop:nth-child(2) {
+    transform: scale(0.5) translate(-200px, 180px);
+    border-radius: 64% 36% 42% 58% / 42% 37% 63% 58%;
+}
+
+.drop:nth-child(3) {
+    transform: scale(0.5) translate(300px, 10px);
+    border-radius: 49% 51% 42% 58% / 56% 47% 53% 44%;
+    align-items: center;
+    font-size: 4em;
+    color: red;
+}
+
+.drop:nth-child(4) {
+    transform: scale(0.35) translate(120px, -350px);
+    border-radius: 39% 61% 63% 37% / 77% 47% 53% 23%;
+}
+
+.drop:nth-child(5) {
+    transform: scale(0.35) translate(2500px, -300px);
+    border-radius: 39% 61% 63% 37% / 77% 47% 53% 23%;
+}
+
+.drop:nth-child(6) {
+    transform: scale(0.35) translate(2600px, -50px);
+    border-radius: 38% 61% 60% 37% / 79% 47% 53% 24%;
+}
+
+.drop:nth-child(7) {
+    transform: scale(0.5) translate(1700px, 150px);
+    border-radius: 49% 51% 42% 58% / 56% 47% 53% 44%;
+}
+
+/*________________________________________________________________________________________________________________________________________________________________*/
+
+/*SECCIÓN 4*/
+
+/*Esta es la sección 4 mi amor para contactarme uyyyy, 
+son estilos para el contenedor mi amor*/
+
+.MV-4 {
+    padding: 0;
+    min-height: 100vh;
+    background: rgb(255, 255, 255);
+    position: relative;
+}
+
+/*Esto es para el mapa mi amor*/
+
+iframe {
+   position: absolute;
+   width: 45%;
+   height: 80%;
+   margin-left: 30px;
+   margin-top: 60px;
+   padding: 0;
+   align-content: center;
+}
+
+.location {
+    position: absolute;
+    width: 300px;
+    height: 400px;
+    top: -120px;
+    right: 130px;
+}
+
+/*Esto es para el texto de contact us*/
+
+.contact-1 p {
+     
+    font-size: 80px;
+    cursor: pointer;
+    width: 550px;
+    margin: 10px 20px;
+    letter-spacing: 5px;
+    text-align: center;
+    font-family: 'DynaPuff', cursive;
+    color: rgb(208, 255, 0);
+    font-size: 80px;
+    -webkit-text-stroke: 1px rgb(0, 0, 0);
+    display: block;
+    text-shadow: 
+                 5px 4px 50px #12b8aa;
+
+    -moz-transform: scale(1) rotate(0deg)
+                    translate(0px, 0px) skew(-5deg, -5deg);
+    -webkit-transform: scale(1) rotate(0deg)
+                       translate(0px, 0px) skew(-5deg, -5deg);
+    -o-transform:scale(1) rotate(0deg)
+                 translate(0px, 0px) skew(-5deg, -5deg);
+    -ms-transform: scale(1) rotate(0deg)
+                   translate(0px, 0px) skew(-5deg, -5deg);
+    transform: scale(1) rotate(0deg)
+               translate(0px, 0px) skew(-5deg, -5deg);
+    -webkit-transition: all 500ms ease-in-out;
+    -moz-transition: all 500ms ease-in-out;
+    -o-transition: all 500ms ease-in-out;
+    transition: all 500ms ease-in-out;
+}
+
+.contact-1 p:hover {
+    margin: 70px 110px 80px 90px;
+    text-shadow:  1px 1px 0 #242323
+    
+}
+
+span {
+    color: rgb(255, 187, 0);
+    font-family: 'DynaPuff', cursive;
+}
+
+.text-contac {
+   border-left-style: ridge;
+   border-left-color: #3586ff;
+   border-left-width: 50px;
+   margin-right: 10%;
+   position: relative;
+}
+
+/*Esto es para el efecto que tiene el párrafo, como que se escribiera solo mi amor*/
+
+.more-text {
+    position: absolute;
+    font-size: 40px;
+    margin-left: 750px;
+    margin-top: -200px;
+}
+
+.more-text::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: white;
+    width: 100%;
+    border-left: 2px solid #000;
+    animation: efect 12s infinite steps(31);
+}
+
+@keyframes efect {
+    40%, 60%{
+        left: calc(100% + 4px);
+    }
+    100%{
+        left: 0;
+    }
+}
+
+/*Esto es para el otro párrafo mi amor*/
+
+.send-text {
+    position: absolute;
+    font-size: 20px;
+    margin-left: 650px;
+    margin-top: -100px;
+    background-color: rgb(208, 255, 0);
+}
+
+/*Esto es para diseño del formulario mi amor, donde esta el número de télefono,
+gmail y ubicación*/
+
+.info-form a {
+    position: relative;
+    font-size: 20px;
+    text-decoration: none;
+    display: inline-block;
+    width: 100%;
+    color: rgb(131, 184, 236);
+    margin-left: 650px;
+    top: -110px;
+    margin-bottom: 25px;
+}
+
+.text01 {
+    position: relative;
+    font-size: 20px;
+    text-decoration: none;
+    display: inline-block;
+    width: 10;
+    color: rgb(0, 0, 0);
+}
+
+.text01:hover {
+    -webkit-text-stroke: 1px rgb(175, 206, 64);
+
+}
+
+.text02 {
+    position: relative;
+    font-size: 20px;
+    text-decoration: none;
+    display: inline-block;
+    width: 0;
+    color: black;
+}
+
+.text03 {
+    position: relative;
+    font-size: 20px;
+    text-decoration: none;
+    display: inline-block;
+    width: 10;
+    color: black;
+}
+
+/*hyphen significa guión mi amor, aquí solo le cambie el color*/
+
+.hyphen {
+    color: black;
+}
+
+/*Esto es para estilos del formulario para enviarme tus sugerencias mi amor*/
+
+form .campo, textarea {
+    position: relative;
+    width: 35%;
+    padding: 15px 10px;
+    font-size: 15px;
+    border: 1px solid #dbdbdb;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    outline: 0px;
+    margin-left: 650px;
+    top: -50px;
+}
+
+textarea {
+    max-width: 530px;
+    min-width: 530px;
+    min-height: 140px;
+    max-height: 150px;
+    margin-left: 650px;
+}
+
+/*Esto es para el botón de enviar mi amor y el de borrar*/
+
+.btn-form {
+    position: relative;
+    font-size: 15px;
+    padding: 10px;
+    top: -80px;
+    cursor: pointer;
+    border: 3px solid;
+    transition: all 0.6s ease;
+    letter-spacing: 1px;
+    border-radius: 50px;
+}
+
+/*el root en esta ocasión me sirve para cambiarle el color a los botones de enviar y borrar,
+en donde dice var --color, agrega ese color como de iluminación que le puse mi amor.*/
+
+:root {
+    --color: #ceff80;
+}
+
+/*El hover aquí es para cambiar el color del borde de los botones mi amor*/
+
+.btn-form:hover {
+    background-color: #ffffff;
+    box-shadow: 0 0 20px var(--color);
+    border-color: var(--color);
+}
+
+/*Esto es para los corazones y para el texto escondido mi amor, */
+
+.heart-M  {
+    position: absolute;
+    margin-top: -110px;
+    font-size: 30px;
+    color: #070707;
+}
+
+.heart-M:hover {
+    color: red;
+}
+
+.heart-V  {
+    position: absolute;
+    margin-top: -50px;
+    margin-left: -40px;
+    font-size: 30px;
+    color: #070707;
+}
+
+.heart-V:hover {
+    color: red;
+}
+
+.text-invisible {
+    font-size: 12px;
+    position: absolute;
+    margin-left: 1190px;
+    top: 319px;
+    opacity: 0;
+}
+
+.text-invisible:hover {
+    opacity: 1;
+}
+
+/*Esto es para estilos del texto mi amor*/
+.text-calificame{
+    font-size: 20px;
+    position: absolute;
+    margin-left: 650px;
+    top: 509px;
+    background-color: #fff01f;
+}
+
+/*Esto es para el estilo y otras cositas del fondo del calificador mi amor*/
+
+.star-rating {
+    width: 400px;
+    background: #ffffff;
+    padding: 24px 30px;
+    border: 1px solid #444;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 745px;
+}
+
+/*Aquí coloqué el display para que aparezca al final de la calificación mi amor y le añadí color y tamaño mi amor*/
+
+.star-rating .post {
+    display: none;
+}
+
+.star-rating .post-text {
+    font-size: 35px;
+    color: #666;
+    font-weight: 500;
+}
+
+.star-rating .edit {
+    position: absolute;
+    left: 1106px;
+    top: 558px;
+    font-size: 16px;
+    color: #666;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.star-rating .edit:hover {
+    text-decoration: underline;
+}
+
+.star-rating form {
+    display: none;
+}
+
+.star-rating .star-widget input {
+    display: none;
+}
+
+/*Esto es para el diseño de las estrellas mi amor*/
+
+.star-widget label {
+    position: relative;
+    font-size: 40px;
+    color: #444;
+    padding: 10px;
+    float: right;
+    transition: all 0.2s ease;
+}
+
+.star-rating input:checked ~ label {
+    color: #fd4;
+}
+
+input:not(:checked) ~ label:hover,
+input:not(:checked) ~ label:hover ~ label {
+    color: #fd4;
+}
+
+input:checked ~ form {
+    display: block;
+}
+
+input#rate-5:checked ~ label {
+    color: #fe7;
+    text-shadow: 0 0 20px rgb(153, 131, 34);
+}
+
+#rate-1:checked ~ form header:before {
+    content: "I hate it 😣";
+    margin: 0 18px 0;
+
+}
+
+#rate-2:checked ~ form header:before {
+    content: "I don't like it 😒";
+    margin: 0 -5px 0;
+
+}
+
+#rate-3:checked ~ form header:before {
+    content: "It is awesome 😄";
+    margin: 0px -10px;
+
+}
+
+#rate-4:checked ~ form header:before {
+    content: "I like it 😎";
+    margin: 0 16px 0;
+}
+
+#rate-5:checked ~ form header:before {
+    content: "I just love it 😍";
+}
+
+/*Esto es para agregarle color al texto de cada estrella mi amor*/
+
+form header {
+    width: 100%;
+    font-size: 25px;
+    color: rgb(224, 210, 101);
+    font-weight: 500;
+    background: #00000000;
+    margin: 632px 0 0 843px;
+    transition: all 0.2s ease;
+}
+
+/*Esto es para el botón donde envías tu respuesta mi amor*/
+
+form .btn {
+    height: 45px;
+    width: 100%;
+    margin: 19px 0;
+}
+
+form .btn button {
+    height: 100%;
+    width: 100%;
+    border: 1px solid #444;
+    outline: none;
+    background: #222;
+    color: #999;
+    font-size: 17px;
+    font-weight: 500;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 57px;
+}
+
+form .btnrating button:hover {
+    background: #1b1b1b;
+}
+
+/*________________________________________________________________________________________________________________________________________________________________*/
+
+/*Footer o parte inferior de la página mi amor*/
+
+/*Esto es para los iconos del footer mi amor y sus estilos,
+y el color del footer*/
+
+footer {
+    position: relative;
+    margin-top: 190px;
+    width: 100%;
+    background-color: #3586ff;
+    min-height: 30px;
+    padding: 2rem 8%;
+    bottom: 0;
+    left: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+/*Esto es para el logo del footer*/
+
+.together {
+    position: absolute;
+    width: 170px;
+    top: -70px;
+    z-index: 2000;
+}
+
+.together:hover {
+    content: url(img/together01.png);
+    width: 170px;
+    transition: all 50s ease;
+}
+
+/*Esto es para los iconos de las redes sociales mi amor*/
+
+.social-icons, .footer-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+    margin-top: 100px;
+}
+
+footer .social-icon1 {
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    border: 1px solid #f2f2f2;
+    background-image: url(img/whatsApp.png);
+    background-position: center;
+    background-size: 60%;
+    background-repeat: no-repeat;
+    margin: 1rem;
+    display: flex;
+    margin-right: 480px;
+}
+
+
+/*EL hover aquí hace que los iconos cambien de color mi amor,
+al pasar el cursor*/
+
+.social-icon1:hover {
+    background-color: #8b138f;
+    filter: invert(1);
+}
+
+footer .social-icon2 {
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    border: 1px solid #fcfcfc;
+    background-image: url(img/gmail.png);
+    background-position: center;
+    background-size: 58%;
+    background-repeat: no-repeat;
+    margin: 1rem;
+    display: flex;
+    position: absolute;
+    margin-right: 169px;
+}
+
+.social-icon2:hover {
+    background-color: rgb(38, 87, 221);
+    filter: invert(1);
+}
+
+footer .social-icon3 {
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    border: 1px solid #f2f2f2;
+    background-image: url(img/Youtube1.png);
+    background-position: center;
+    background-size: 60%;
+    background-repeat: no-repeat;
+    margin: 1rem;
+    display: flex;
+    position: absolute;
+    margin-left: 185px;
+}
+
+.social-icon3:hover {
+    background-color: #21c2ce;
+    filter: invert(1);
+}
+
+
+footer .social-icon4 {
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    border: 1px solid #f2f2f2;
+    background-image: url(img/vM.png);
+    background-position: center;
+    background-size: 55%;
+    background-repeat: no-repeat;
+    margin: 1rem;
+    display: flex;
+    position: absolute;
+    margin-left: 490px;
+}
+
+.social-icon4:hover {
+    background-color: #fcfeff;
+    filter: invert(1);
+}
+
+
+/*Esto es para los enlaces del footer mi amor*/
+
+
+.footer-menu {
+    list-style: none;
+    color: #f2f2f2;
+    font-size: 18px;
+    margin-top: -20px;
+    text-decoration: none;
+}
+
+
+.menu-item {
+    margin: 1rem 1.5rem;
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.menu-item:hover {
+    opacity: 1;
+}
+
+.copyright{
+    color: #f2f2f2;
+    opacity: 0.4;
+    text-align: center;
+}
+
+/*Esto es para el efecto de olas del footer mi amor*/
+
+footer .waVe {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url(img/wave.png);
+    background-size: 1000px 100px;
+}
+
+footer .waVe#waVe1 {
+    z-index: 1000;
+    opacity: 1;
+    bottom: 0;
+    animation: animateWave 4s linear infinite;
+}
+
+footer .waVe#waVe2 {
+    z-index: 999;
+    opacity: 0.5;
+    bottom: 10px;
+    animation: animateWave-02 4s linear infinite;
+}
+
+footer .waVe#waVe3 {
+    z-index: 1000;
+    opacity: 0.2;
+    bottom: 15px;
+    animation: animateWave 3s linear infinite;
+}
+
+footer .waVe#waVe4 {
+    z-index: 1000;
+    opacity: 0.7;
+    bottom: 20px;
+    animation: animateWave 3s linear infinite;
+}
+
+/*Esto es para dar ese efecto que tienen las olas mi amor*/
+
+@keyframes animateWave {
+    0% {
+        background-position-x: 1000px;
+    }
+    100% {
+        background-position-x: 0px;
+    }
+}
+
+@keyframes animateWave-02 {
+    0% {
+        background-position-x: 0px;
+    }
+    100% {
+        background-position-x: 1000px;
+    }
+}
+
+
+/*responsive
+
+@media (min-width: 360px) {
+    body{
+        position: relative;
+        : 50%;
+    }
+    header{
+        position: absolute;
+        padding: 13px;
+    }
+    nav{
+        position: relative;
+    }
+    .MV{
+            padding: 5px 0;
+            width: 100%;
+            overflow: hidden;
+        }
+} */
+
+
+@media screen and (max-width: 868px) {
+    .line {
+      width: 30px;
+      height: 3px;
+      background: white;
+      margin: 5px;
+    }
+    nav {
+      position: relative;
+    }
+    .hamburger {
+      position: absolute;
+      cursor: pointer;
+      right: 5%;
+      top: 50%;
+      transform: translate(-5%, -50%);
+      z-index: 2;
+    }
+    .nav-links {
+      position: fixed;
+      background: rgba(255, 255, 255, 0.425);
+      height: 100vh;
+      width: 100%;
+      margin-top: 18.5px;
+      flex-direction: column;
+      display: flex;
+      clip-path: circle(100px at 90% -10%);
+      -webkit-clip-path: circle(100px at 90% -20%);
+      transition: all 1s ease-out;
+      pointer-events: none;
+      right: 2px;
+      overflow: hidden;
+    }
+    .nav-links.open {
+      clip-path: circle(1000px at 90% -10%);
+      -webkit-clip-path: circle(600px at 90% -10%);
+      pointer-events: all;
+      overflow: hidden;
+    }
+    .nav-links li {
+      opacity: 0;
+    }
+    .nav-links li a {
+      font-size: 25px;
+    }
+    .nav-links li:nth-child(1) {
+      transition: all 0.5s ease 0.2s;
+      z-index: 100;
+      margin-left: -140px;
+    }
+    .nav-links li:nth-child(2) {
+      transition: all 0.5s ease 0.4s;
+      z-index: 100;
+      margin-left: -80px;
+
+    }
+    .nav-links li:nth-child(3) {
+      transition: all 0.5s ease 0.6s;
+      z-index: 100;
+      margin-left: -20px;
+    }
+    .nav-links li:nth-child(4) {
+        transition: all 0.5s ease 0.6s;
+        z-index: 100;
+        margin-left: 60px;
+      }
+    li.fade {
+      opacity: 1;
+    }
+    .list {  
+        color: rgb(228, 232, 236);
+        padding: 5px 17px;
+        border-radius: 20px;
+        margin-top: 15px;
+        width: 70px;   
+    }
+    .list:hover{
+        background: none;
+    }
+    .list >a:hover {
+        background: none;
+    }
+    .list a {
+       color: #f4f6f781;
+       margin-left: 7px;
+    }
+    header {
+        width: 100%;
+        padding: 10px 300px;
+    }
+    .logo {
+        font-size: 1em;
+        margin-top: 5px;
+    }
+    #logomv{
+        margin-left: -280px;
+    }
+    .logo-palm{
+        width: 50px;
+        top: 2.5px;
+        margin-left: -255px;
+    }
+    .MV{
+        max-width: 100%;
+        width: 100%;
+    }
+    .MV img{
+        height: 70%;
+        width: 100%;
+        overflow: hidden;
+    }
+    #text{
+        font-size: 3rem;
+        margin-top: 35%;
+        margin-bottom: 740px;
+    }
+    #border{
+        font-size: 3rem;
+        margin-top: 35%;
+        margin-bottom: 740px;
+    }
+    input[type="search"]{
+        position: absolute;
+        top: 55px;
+        left: 230px;
+        z-index: 1;
+        padding: 5px;
+        padding-right: 10px;
+        border-radius: 25px;
+        text-indent: 5px;
+        font-size: 10px;
+    }
+    .search{
+        width: 40%;
+        max-height: 25%;
+        top: 80px;
+        right: 19px;    
+    }
+    tbody tr td a{
+        text-decoration: none;
+        font-size: 10px;
+        padding: 10px 0;
+        padding-left: 3px;
+    }
+    .img-think {
+        width: 24px;
+        left: 365px;
+        top: 50px;
+    }
+    .section-2{
+        width: 100%;
+        height: 100vh;
+        top: 400px;
+        overflow: hidden;
+    }
+    .ocean {
+        width: 100%;
+        height: 100%;
+    }
+    .section-2 h4 {
+        font-size: 25px;
+        margin-left: 5px;
+        margin-top: -10px;
+    }
+    .wave1 {
+        top: 90.2%;
+    }
+    .img-about, #m, #v {
+        z-index: 100;
+        margin: 100px 200px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 250%;
+        height: 50vh;
+    }
+    .section-2 
+    .MV-text {
+        width: 85%;
+        margin-top: 85px;
+        margin-left: 1%;
+    }
+    .MV-text h3 {
+        font-size: 23px;
+    }
+    .MV-text h3 span{
+        width: 33px;
+        height: 33px;
+        padding: 2px;
+        margin-right: 10px;
+        margin-top: 3px;
+    }
+    .MV-text p {
+        margin-top: 10px;
+        font-size: 15px;
+        line-height: 23px;
+    }
+    .dot {
+        height: 6px;
+        width: 6px;
+    }    
+    .bubbles-animation1{
+        height: 30px;
+        width: 30px;
+    }
+    .bubbles-animation2{
+        height: 40px;
+        width: 40px;
+    }
+    .bubbles-animation4{
+        height: 30px;
+        width: 30px;
+    }
+    .bubbles-animation5{
+        top: 92%;
+        height: 30px;
+        width: 30px;
+    }
+    .bubbles-animation7{
+        top: 94%;
+        left: 29%;
+        height: 40px;
+        width: 40px;
+    }
+    .bubbles-animation8{
+        height: 30px;
+        width: 30px;
+    }
+    .bubbles-animation9{
+        height: 40px;
+        width: 40px;
+    }
+    .bubbles-animation12{
+        height: 30px;
+        width: 30px;   
+    }
+    .bubbles-animation16{
+        z-index: 100;
+        height: 50px;
+        width: 50px;
+    }
+    .bubbles-animation18{
+        height: 50px;
+        width: 50px;
+    }
+    .bubbles-animation19{
+        margin-left: -35px;
+        margin-top: 45px;
+        height: 30px;
+        width: 30px;
+        animation: animate 5s linear infinite;    
+    }
+    .bubbles-animation20{
+        height: 40px;
+        width: 40px;
+    }
+    .bubbles-animation21{
+        height: 40px;
+        width: 40px;
+    }
+    .bubbles-animation22{
+        top: 76%;
+        left: 5%;
+        height: 30px;
+        width: 30px;
+    }
+    .bubbles-animation24{
+        top: 85%;
+        left: 65%;
+        height: 30px;
+        width: 30px;
+    }
+    .bubbles-animation25{
+        height: 40px;
+        width: 40px;
+    }
+    .btn-floating {
+        top: -128px;
+        margin-left: 225px;
+        padding: 1.4rem 2.9rem;
+        color: white;
+    }
+    .text-floating {
+        width: 320px;
+        height: 280px;
+        padding: 40px 2px;
+        background-size: 180px;
+        background-position-y: 90px;
+    }
+    .text-floating p {
+        margin-top: 10px;
+    } 
+    .text-floating2 {
+        top: 220px;
+    } 
+    .close {
+       padding: 10px 17px;
+       font-size: 25px;
+    }
+    .MV-3 {
+        width: 100%;
+        margin-top: -684px;
+        overflow: hidden;
+    }    
+    .video-title {
+        margin-top: -105px;
+        margin-left: -465px;
+    }    
+    .video-title p {
+        font-size: 70px;
+    }    
+    .boat {
+        width: 150px;
+        top: 1990px;
+        animation: boat 10s linear infinite;
+        overflow: hidden;
+    }    
+    .lobester {
+        top: 1320px;
+        right: 120px;
+    }
+    .shark {
+        top: 1730px;
+        left: -100px;
+        animation: shark 10s linear infinite;
+        overflow: hidden;
+    }
+    .manta-ray {
+        top: 1537px;
+        margin-left: 320px;
+        animation: mantaRay 6s linear infinite;
+        overflow: hidden;
+    }
+    .fish03 {
+        z-index: 100;
+        top: 1200px;
+        right: 90px;
+        animation: fish03 15s linear infinite;
+        overflow: hidden;
+    }
+    .fish4 {
+        top: 1850px;
+        margin-left: 195px;
+        margin-top: 40px;
+        overflow: hidden;
+    }
+    .fish5 {
+        top: 2140px;
+        margin-left: 90px;
+        animation: fish5 5s linear infinite;
+        overflow: hidden;
+    }        
+    @keyframes fish03 {
+        0%{
+            right: 0px;
+        }
+        100%{
+            right: 305px;
+        }
+    }
+    @keyframes fish5 {
+        0%{
+            margin-right: 0px;
+        }
+        100%{
+            margin: 30px;
+        }
+    }
+    @keyframes shark {
+        0%{
+            margin-right: 0;
+        }
+        100%{
+            margin-left: 500px;
+        }
+    }
+    @keyframes mantaRay {
+        0%{
+            margin-right: 0;
+        }
+        100%{
+            margin-left: -100px;
+        }
+    }
+    @keyframes boat {
+        0%{
+            margin-right: 0;
+        }
+        100%{
+            margin-right: 400px;
+        }
+    }
+    .text-03 {
+        top: 190px;
+        margin-left: 15px;
+        width: 360px;
+        font-size: 20px;
+    }
+    .btn-gallery {
+        display: flex;
+        padding: 15px 25px;
+        font-size: 20px;
+        top: 330px;
+        margin-right: 170px;  
+    }    
+    .wave2 {
+        overflow: hidden;
+    }    
+    .drops {
+        margin-right: 210px;
+        padding: 150px 0;
+    }
+    .drop {
+        width: 120px;
+        height: 120px;        
+        font-size: 2em;
+        opacity: 0.5;
+        top: 70px;
+    }
+    .drop::before {
+        top: 15px;
+        left: 50px;
+        width: 20px;
+        height: 20px;
+    }
+    .drop::after {
+        top: 25px;
+        left: 75px;
+        width: 10px;
+        height: 10px;
+    }    
+    .drop:nth-child(2) {
+        transform: scale(0.5) translate(-110px, 180px);
+    }
+    .drop:nth-child(3) {
+        transform: scale(0.5) translate(200px, 10px);
+        font-size: 4em;
+    }
+    .drop:nth-child(4) {
+        transform: scale(0.35) translate(720px, 120px);
+    }
+    
+    .drop:nth-child(5) {
+        transform: scale(0.35) translate(770px, 290px);
+    }
+    .drop:nth-child(6) {
+        transform: scale(0.35) translate(685px, 460px);
+    }
+    .drop:nth-child(7) {
+        transform: scale(0.5) translate(-70px, 330px);
+    }
+    .MV-4 {
+        overflow: hidden;
+        height: 163vh;
+        width: 100%;
+        margin-top: -10px;
+    }    
+    iframe {
+       width: 92%;
+       height: 29%;
+       margin-left: 15px;
+       margin-top: 630px;
+       overflow: hidden;
+    }
+    .location {
+        position: absolute;
+        width: 270px;
+        height: 330px;
+        top: 45px;
+        right: -40px;
+        overflow: hidden;
+    }    
+    .contact-1 p {    
+        font-size: 40px;
+        width: 550px;
+        margin: 0px -115px;
+        letter-spacing: 3px;
+        font-size: 37px;
+        right: 300px;
+        overflow: hidden;
+    }
+    .contact-1 p:hover {
+        margin: 0px 0px 0px 0px;        
+    }
+    .text-contac {
+       border-left-style: ridge;
+       border-left-color: #3586ff;
+       border-left-width: 50px;
+       margin-right: -10%;
+       position: relative;
+       overflow: hidden;
+    }
+    .more-text {
+        font-size: 25px;
+        right: 24px;
+        top: 300px;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+    .send-text {
+        width: 300px;
+        text-align: center;
+        font-size: 14px;
+        margin-left: 600px;
+        margin-top: -100px;
+        top: 370px;
+        right: 50px;
+    }    
+    .info-form a {
+        font-size: 15px;
+        width: 100%;
+        margin-left: 615px;
+        top: 115px;
+        right: 605px;
+        margin-bottom: 10px;
+        overflow: hidden;
+    }
+    .text01 {
+        font-size: 15px;
+    }
+    .text02 {
+        font-size: 15px;
+    }    
+    .text03 {
+        font-size: 15px;
+    }
+    form .campo, textarea {
+        width: 65%;
+        font-size: 15px;
+        margin-bottom: 10px;
+        margin-left: 635px;
+        top: 175px;
+        right: 627px;
+        overflow: hidden;
+    }
+    textarea {
+        width: 90%;
+        min-width: 0px;
+        min-height: 150px;
+        margin-left: 635px;
+        overflow: hidden;
+    }
+    .btn-form {
+        top: 170px;
+        left: 290px;
+    }    
+    .heart-M  {
+        top: 745px;
+        left: 90px;
+        font-size: 30px;
+    }
+    .heart-V  {
+        top: 660px;
+        margin-left: 170px;
+        font-size: 30px;
+    }
+    .text-invisible {
+        font-size: 10px;
+        right: 150px;
+        top: 635px;
+        opacity: 1;
+        white-space: nowrap;
+    }
+    .text-invisible:hover {
+        color: greenyellow;
+    }
+    .text-calificame{
+        width: 300px;
+        text-align: center;
+        font-size: 14px;
+        right: 50px;
+        top: 1109px;
+    }    
+    .star-rating {
+        width: 320px;
+        background: #ffffff;
+        padding: 20px 20px;
+        border: 1px solid #444;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-left: 30px;
+        margin-top: 700px;
+    }
+    .star-rating .post-text {
+        font-size: 25px;
+        color: #666;
+        font-weight: 500;
+    }
+    .star-rating .edit {
+        position: absolute;
+        left: 308px;
+        top: 1178px;
+        font-size: 16px;
+        color: #666;
+        font-weight: 500;
+        cursor: pointer;
+    }
+    .star-rating .edit:hover {
+        text-decoration: underline;
+    }
+    .star-rating form {
+        display: none;
+    }
+    .star-rating .star-widget input {
+        display: none;
+    }    
+    .star-widget label {
+        position: relative;
+        font-size: 28px;
+        color: #444;
+        padding: 10px;
+        float: right;
+        transition: all 0.2s ease;
+    }
+    
+    .star-rating input:checked ~ label {
+        color: #fd4;
+    }
+    
+    input:not(:checked) ~ label:hover,
+    input:not(:checked) ~ label:hover ~ label {
+        color: #fd4;
+    }
+    
+    input:checked ~ form {
+        display: block;
+    }
+    
+    input#rate-5:checked ~ label {
+        color: #fe7;
+        text-shadow: 0 0 20px rgb(153, 131, 34);
+    }
+    
+    #rate-1:checked ~ form header:before {
+        content: "I hate it 😣";
+        margin: 0 18px 0;
+    }
+    
+    #rate-2:checked ~ form header:before {
+        content: "I don't like it 😒";
+        margin: 0 -3px 0;
+    }
+    #rate-3:checked ~ form header:before {
+        content: "It is awesome 😄";
+        margin: 0px -9px;
+    }
+    #rate-4:checked ~ form header:before {
+        content: "I like it 😎";
+        margin: 0 26px 0;
+    }
+    #rate-5:checked ~ form header:before {
+        content: "I just love it 😍";
+    }
+    form header {
+        width: 800px;
+        font-size: 25px;
+        color: rgb(224, 210, 101);
+        background: #00000000;
+        transition: all 0.2s ease;
+        margin: 1240px 0px 0 -190px;
+    }    
+    form .btn {
+        height: 45px;
+        width: 100%;
+        margin: 15px 0;
+    }
+    form .btn button {
+        height: 100%;
+        width: 100%;
+        border: 1px solid #444;
+        outline: none;
+        background: #222;
+        color: #999;
+        font-size: 17px;
+        font-weight: 500;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        margin-top: 59px;
+    }
+    form .btnrating button:hover {
+        background: #1b1b1b;
+    }
+    footer {
+        position: relative;
+        margin-top: 100px;
+        width: 100%;
+        background-color: #3586ff;
+        height: 80%;
+        padding: 2rem 5%;
+        bottom: 0;
+        left: 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }    
+    .together {
+        position: absolute;
+        width: 150px;
+        top: -75px;
+        z-index: 2000;
+    }
+    .together:hover {
+        content: url(img/together01.png);
+        width: 150px;
+        transition: all 50s ease;
+    }    
+    .social-icons, .footer-menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-bottom: 1rem;
+        margin-top: 80px;
+    }
+    
+    footer .social-icon1 {
+        height: 50px;
+        width: 50px;
+        border-radius: 50px;
+        border: 1px solid #f2f2f2;
+        background-image: url(img/whatsApp.png);
+        background-position: center;
+        background-size: 55%;
+        background-repeat: no-repeat;
+        margin: 1rem;
+        display: flex;
+        margin-right: 120px;
+    }
+    footer .social-icon2 {
+        height: 50px;
+        width: 50px;
+        border-radius: 50px;
+        border: 1px solid #fcfcfc;
+        background-image: url(img/gmail.png);
+        background-position: center;
+        background-size: 55%;
+        background-repeat: no-repeat;
+        margin: 1rem;
+        display: flex;
+        position: absolute;
+        margin-right: 290px;
+    }
+    footer .social-icon3 {
+        height: 50px;
+        width: 50px;
+        border-radius: 50px;
+        border: 1px solid #f2f2f2;
+        background-image: url(img/Youtube1.png);
+        background-position: center;
+        background-size: 55%;
+        background-repeat: no-repeat;
+        margin: 1rem;
+        display: flex;
+        position: absolute;
+        margin-left: 83px;
+    }
+    footer .social-icon4 {
+        height: 50px;
+        width: 50px;
+        border-radius: 50px;
+        border: 1px solid #f2f2f2;
+        background-image: url(img/vM.png);
+        background-position: center;
+        background-size: 55%;
+        background-repeat: no-repeat;
+        margin: 1rem;
+        display: flex;
+        position: absolute;
+        margin-left: 245px;
+    }
+    .footer-menu {
+        list-style: none;
+        color: #f2f2f2;
+        font-size: 15px;
+        margin-top: -20px;
+        text-decoration: none;
+    }
+    .menu-item {
+        margin: 2rem 0.7;
+        cursor: pointer;
+        opacity: 0.6;
+    }
+    .menu-item:hover {
+        opacity: 1;
+    }
+    .copyright{
+        color: #f2f2f2;
+        opacity: 0.4;
+        text-align: center;
+    }    
+    footer .waVe {
+        position: absolute;
+        top: -100px;
+        left: 0;
+        width: 100%;
+        height: 100px;
+        background: url(img/wave.png);
+        background-size: 800px 100px;
+        overflow: hidden;
+    }
+    @keyframes animateWave {
+        0% {
+            background-position-x: 800px;
+        }
+        100% {
+            background-position-x: 0px;
+        }
+    }
+    
+    @keyframes animateWave-02 {
+        0% {
+            background-position-x: 0px;
+        }
+        100% {
+            background-position-x: 800px;
+        }
+    }
+
+  }
+
+
+  @media screen and (max-width: 770px) {
+      .logo-palm{
+          width: 50px;
+          top: 5px;
+          margin-left: -255px;
+      }
+      #text{
+          font-size: 3rem;
+          margin-top: 19%;
+          margin-bottom: 740px;
+      }
+      #border{
+          font-size: 3rem;
+          margin-top: 19%;
+          margin-bottom: 740px;
+      }
+      .img-think {
+          width: 24px;
+          left: 355px;
+          top: 50px;
+      }
+      .section-2{
+          width: 100%;
+          height: 100vh;
+          top: 320px;
+          overflow: hidden;
+      }
+      .section-2 h4 {
+          font-size: 25px;
+          margin-left: 5px;
+          margin-top: -10px;
+          text-align: center;
+      }
+      .wave1 {
+          top: 90.2%;
+      }
+      .img-about, #m, #v {
+          z-index: 100;
+          margin: 100px 200px;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 200%;
+          height: 50vh;
+      }
+      .section-2 
+      .MV-text {
+          width: 88%;
+          margin-top: 85px;
+          margin-left: 1%;
+      }
+      .MV-text h3 {
+          font-size: 20px;
+      }
+      .MV-text h3 span{
+          width: 30px;
+          height: 30px;
+          padding: 2px;
+          margin-right: 10px;
+          margin-top: 3px;
+      }
+      .MV-text p {
+          margin-top: 1px;
+          font-size: 14px;
+          line-height: 23px;
+      }
+      .btn-floating {
+          top: -119px;
+          margin-left: 225px;
+          padding: 1.8rem 2.8rem;
+          color: white;
+          border-color: transparent;
+          font-size: 0.2rem;
+      }
+      .btn-floating:hover{
+        border-color: transparent;
+      }
+      .text-floating {
+          width: 320px;
+          height: 280px;
+          padding: 40px 2px;
+          background-size: 180px;
+          background-position-y: 75px;
+      }
+      .MV-3 {
+          width: 100%;
+          margin-top: -850px;
+          overflow: hidden;
+      }    
+      .video-title {
+          margin-top: -105px;
+          margin-left: -490px;
+      }     
+      .boat {
+          width: 150px;
+          top: 1810px;
+          animation: boat 10s linear infinite;
+          overflow: hidden;
+      }    
+      .lobester {
+          top: 1115px;
+          right: 100px;
+      }
+      .shark {
+          top: 1570px;
+          left: -100px;
+          animation: shark 10s linear infinite;
+          overflow: hidden;
+      }
+      .manta-ray {
+          top: 1365px;
+          margin-left: 320px;
+          animation: mantaRay 6s linear infinite;
+          overflow: hidden;
+      }
+      .fish03 {
+          z-index: 100;
+          top: 980px;
+          right: 80px;
+          animation: fish03 15s linear infinite;
+          overflow: hidden;
+      }
+      .fish4 {
+          top: 1660px;
+          margin-left: 175px;
+          margin-top: 40px;
+          overflow: hidden;
+      }
+      .fish5 {
+          top: 1970px;
+          margin-left: 90px;
+          animation: fish5 5s linear infinite;
+          overflow: hidden;
+      }        
+      .text-03 {
+          top: 190px;
+          margin-left: 5px;
+          width: 360px;
+          font-size: 20px;
+      }
+      .MV-4 {
+          overflow: hidden;
+          height: 196vh;
+          width: 100%;
+          margin-top: -10px;
+      }    
+      iframe {
+         width: 92%;
+         height: 29%;
+         margin-left: 15px;
+         margin-top: 630px;
+         overflow: hidden;
+      }
+      .location {
+          position: absolute;
+          width: 270px;
+          height: 330px;
+          top: 45px;
+          right: -60px;
+          overflow: hidden;
+      }    
+      .contact-1 p {    
+          font-size: 30px;
+          width: 510px;
+          margin: 0px -130px;
+          letter-spacing: 3px;
+          font-size: 37px;
+          right: 300px;
+          overflow: hidden;
+      }
+      .contact-1 p:hover {
+          margin: 0px 0px 0px 0px;        
+      }
+      .send-text {
+          width: 300px;
+          text-align: center;
+          font-size: 14px;
+          margin-left: 600px;
+          margin-top: -100px;
+          top: 370px;
+          right: 39px;
+      }    
+      .more-text{
+        right: 10px;
+      }
+      .btn-form {
+          top: 180px;
+          left: 270px;
+          background-color: transparent;
+          color: #000000c9;
+      }    
+      .heart-M  {
+          top: 745px;
+          left: 50px;
+          font-size: 30px;
+      }
+      .heart-V  {
+          top: 660px;
+          margin-left: 120px;
+          font-size: 30px;
+      }
+      .text-invisible {
+          font-size: 10px;
+          right: 190px;
+          top: 635px;
+          opacity: 1;
+          white-space: nowrap;
+      }
+      .text-calificame{
+          width: 300px;
+          text-align: center;
+          font-size: 14px;
+          right: 40px;
+          top: 1114px;
+      }    
+      .star-rating {
+          width: 320px;
+          background: #ffffff;
+          padding: 20px 20px;
+          border: 1px solid #444;
+          border-radius: 10px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          margin-left: 20px;
+          margin-top: 690px;
+      }
+      .star-rating .post-text {
+          font-size: 25px;
+          color: #666;
+          font-weight: 500;
+      }
+      .star-rating .edit {
+          position: absolute;
+          left: 300px;
+          top: 1169px;
+          font-size: 16px;
+          color: #666;
+          font-weight: 500;
+          cursor: pointer;
+      }
+      form header {
+          width: 800px;
+          font-size: 25px;
+          color: rgb(224, 210, 101);
+          background: #00000000;
+          transition: all 0.2s ease;
+          margin: 1230px 0px 0 -205px;
+      }   
+      footer {
+          position: relative;
+          margin-top: 10px;
+          width: 100%;
+          background-color: #3586ff;
+          height: 100%;
+          padding: 2rem 5%;
+          bottom: 0;
+          left: 0;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          display: flex;
+      }    
+      .together {
+          position: absolute;
+          width: 150px;
+          top: -75px;
+          z-index: 2000;
+      }
+      .together:hover {
+          content: url(img/together01.png);
+          width: 150px;
+          transition: all 50s ease;
+      }    
+      .social-icons, .footer-menu {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-wrap: wrap;
+          margin-bottom: 1rem;
+          margin-top: 80px;
+      }
+      
+      footer .social-icon1 {
+          height: 50px;
+          width: 50px;
+          border-radius: 50px;
+          border: 1px solid #f2f2f2;
+          background-image: url(img/whatsApp.png);
+          background-position: center;
+          background-size: 55%;
+          background-repeat: no-repeat;
+          margin: 1rem;
+          display: flex;
+          margin-right: 120px;
+      }
+      footer .social-icon2 {
+          height: 50px;
+          width: 50px;
+          border-radius: 50px;
+          border: 1px solid #fcfcfc;
+          background-image: url(img/gmail.png);
+          background-position: center;
+          background-size: 55%;
+          background-repeat: no-repeat;
+          margin: 1rem;
+          display: flex;
+          position: absolute;
+          margin-right: 290px;
+      }
+      footer .social-icon3 {
+          height: 50px;
+          width: 50px;
+          border-radius: 50px;
+          border: 1px solid #f2f2f2;
+          background-image: url(img/Youtube1.png);
+          background-position: center;
+          background-size: 55%;
+          background-repeat: no-repeat;
+          margin: 1rem;
+          display: flex;
+          position: absolute;
+          margin-left: 83px;
+      }
+      footer .social-icon4 {
+          height: 50px;
+          width: 50px;
+          border-radius: 50px;
+          border: 1px solid #f2f2f2;
+          background-image: url(img/vM.png);
+          background-position: center;
+          background-size: 55%;
+          background-repeat: no-repeat;
+          margin: 1rem;
+          display: flex;
+          position: absolute;
+          margin-left: 245px;
+      }
+      .footer-menu {
+          list-style: none;
+          color: #f2f2f2;
+          font-size: 15px;
+          margin-top: -20px;
+          text-decoration: none;
+      }
+      .menu-item {
+          margin: 2rem 0.7;
+          cursor: pointer;
+          opacity: 0.6;
+      }
+      .menu-item:hover {
+          opacity: 1;
+      }
+      .copyright{
+          color: #f2f2f2;
+          opacity: 0.4;
+          text-align: center;
+      }    
+      footer .waVe {
+          position: absolute;
+          top: -100px;
+          left: 0;
+          width: 100%;
+          height: 100px;
+          background: url(img/wave.png);
+          background-size: 800px 100px;
+          overflow: hidden;
+      }
+      @keyframes animateWave {
+          0% {
+              background-position-x: 800px;
+          }
+          100% {
+              background-position-x: 0px;
+          }
+      }
+      
+      @keyframes animateWave-02 {
+          0% {
+              background-position-x: 0px;
+          }
+          100% {
+              background-position-x: 800px;
+          }
+      }
+  }
